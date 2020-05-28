@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/solway_regular"
+        android:text="@string/text_default_greeting"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/solway_regular"
+        android:text="@string/text_create_something_new"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGreeting" />
+
+    <TextView
+        android:id="@+id/textPickUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/solway_regular"
+        android:text="@string/text_pick_up_left_off"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/card_home"
+        app:layout_constraintTop_toTopOf="@+id/textCreate" />
+
+    <Button
+        android:id="@+id/buttonEntry"
+        style="@style/ButtonHomeMenu"
+        android:layout_width="@dimen/home_button_size"
+        android:layout_height="@dimen/home_button_size"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/entry_circle"
+        android:backgroundTint="@color/colorEntry"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/textEntry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCreate" />
+
+    <Button
+        android:id="@+id/buttonDream"
+        style="@style/ButtonHomeMenu"
+        android:layout_width="@dimen/home_button_size"
+        android:layout_height="@dimen/home_button_size"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/dream_circle"
+        android:backgroundTint="@color/colorDream"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/buttonEntry"
+        app:layout_constraintTop_toTopOf="@+id/buttonEntry" />
+
+    <Button
+        android:id="@+id/buttonToDo"
+        style="@style/ButtonHomeMenu"
+        android:layout_width="@dimen/home_button_size"
+        android:layout_height="@dimen/home_button_size"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/todo_circle"
+        android:backgroundTint="@color/colorToDo"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/buttonDream"
+        app:layout_constraintTop_toTopOf="@+id/buttonEntry" />
+
+    <TextView
+        android:id="@+id/textEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/dosis_regular"
+        android:text="@string/entry"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/card_home"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEntry"
+        app:layout_constraintStart_toStartOf="@+id/buttonEntry"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEntry" />
+
+    <TextView
+        android:id="@+id/textDream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/dosis_regular"
+        android:text="@string/dream"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDream"
+        app:layout_constraintStart_toStartOf="@+id/buttonDream"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDream" />
+
+    <TextView
+        android:id="@+id/textToDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/dosis_regular"
+        android:text="@string/ToDo"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonToDo"
+        app:layout_constraintStart_toStartOf="@+id/buttonToDo"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToDo" />
+
+    <include
+        android:id="@+id/card_home"
+        layout="@layout/card_note"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/journal_card_height"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonToDo"
+        app:layout_constraintTop_toBottomOf="@+id/textPickUp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

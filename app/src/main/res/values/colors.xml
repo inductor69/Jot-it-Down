@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#121212</color>
+    <color name="colorPrimaryDark">#121212</color>
+    <color name="colorAccent">#21e6c1</color>
+    <color name="colorBackground">#121212</color>
+    <color name="colorNavBar">#121212</color>
+
+    <color name="colorHomeMenuText">#eeeeee</color>
+    <color name="colorEntry">#ca9a63</color>
+    <color name="colorDream">#e14594</color>
+    <color name="colorToDo">#74a973</color>
+</resources>

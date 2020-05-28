@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/solway_regular"
+        android:text="@string/text_default_greeting"
+        android:textSize="34sp"
+        android:textColor="#bbe1fa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/solway_regular"
+        android:text="@string/text_default_welcome"
+        android:textSize="18sp"
+        android:textColor="#bbe1fa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textGreeting" />
+
+    <TextView
+        android:id="@+id/textCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/solway_regular"
+        android:text="@string/text_create_something_new"
+        android:textSize="18sp"
+        android:textColor="#bbe1fa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWelcome" />
+
+    <TextView
+        android:id="@+id/textPickUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/solway_regular"
+        android:text="@string/text_pick_up_left_off"
+        android:textSize="18sp"
+        android:textColor="#bbe1fa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEntry" />
+
+    <Button
+        android:id="@+id/buttonDream"
+        style="@style/ButtonHomeMenu"
+        android:layout_width="@dimen/home_button_size"
+        android:layout_height="@dimen/home_button_size"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/dream_circle"
+        android:backgroundTint="@color/colorDream"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonEntry"
+        app:layout_constraintEnd_toStartOf="@+id/buttonToDo"
+        app:layout_constraintStart_toEndOf="@+id/buttonEntry"
+        app:layout_constraintTop_toTopOf="@+id/buttonEntry" />
+
+    <Button
+        android:id="@+id/buttonToDo"
+        style="@style/ButtonHomeMenu"
+        android:layout_width="@dimen/home_button_size"
+        android:layout_height="@dimen/home_button_size"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/todo_circle"
+        android:backgroundTint="@color/colorToDo"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonDream"
+        app:layout_constraintTop_toTopOf="@+id/buttonDream" />
+
+    <Button
+        android:id="@+id/buttonEntry"
+        style="@style/ButtonHomeMenu"
+        android:layout_width="@dimen/home_button_size"
+        android:layout_height="@dimen/home_button_size"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/entry_circle"
+        android:backgroundTint="@color/colorEntry"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDream"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCreate" />
+
+    <include
+        android:id="@+id/card_home"
+        layout="@layout/card_note"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/journal_card_height"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:foreground="?android:selectableItemBackgroundBorderless"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPickUp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/dosis_regular"
+        android:text="@string/entry"
+        android:textSize="18sp"
+        android:textColor="#bbe1fa"
+        app:layout_constraintEnd_toEndOf="@+id/buttonEntry"
+        app:layout_constraintStart_toStartOf="@+id/buttonEntry"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEntry" />
+
+    <TextView
+        android:id="@+id/textDream"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/dosis_regular"
+        android:text="@string/dream"
+        android:textSize="18sp"
+        android:textColor="#bbe1fa"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDream"
+        app:layout_constraintStart_toStartOf="@+id/buttonDream"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDream" />
+
+    <TextView
+        android:id="@+id/textToDo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/dosis_regular"
+        android:text="@string/ToDo"
+        android:textSize="18sp"
+        android:textColor="#bbe1fa"
+        app:layout_constraintEnd_toEndOf="@+id/buttonToDo"
+        app:layout_constraintStart_toStartOf="@+id/buttonToDo"
+        app:layout_constraintTop_toBottomOf="@+id/buttonToDo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

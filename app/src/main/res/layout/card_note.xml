@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/journal_card_height"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    android:foreground="?android:selectableItemBackgroundBorderless"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp"
+    app:cardBackgroundColor="#393e46"
+    app:contentPadding="0dp">
+
+    <ImageView
+        android:id="@+id/noteTypeImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:tint="#3282b8"
+        app:srcCompat="@drawable/dream_circle"
+        android:contentDescription="@string/card_img_description" />
+
+    <TextView
+        android:id="@+id/noteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/zillaslab_regular"
+        android:maxHeight="32sp"
+        android:textColor="#bbe1fa"
+        android:text="@string/card_placeholder_title"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/noteDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#bbe1fa"
+        android:fontFamily="@font/zillaslab_regular"
+        android:text="@string/card_placeholder_date"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/noteContentPreview"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="@font/dosis_regular"
+        android:gravity="top"
+        android:textColor="#bbe1fa"
+        android:maxHeight="24sp"
+        android:singleLine="true"
+        android:layout_width="wrap_content"
+        android:text="@string/card_placeholder_content"
+        android:textSize="18sp" />
+
+</androidx.cardview.widget.CardView>
